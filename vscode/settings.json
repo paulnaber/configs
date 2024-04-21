@@ -1,0 +1,302 @@
+{
+    // editor settings
+    // Operator Mono
+    // https://www.typography.com/blog/introducing-operator
+    // this font uses kind of handwriting for italics
+    // comments for example are italic and therefore look very nice
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
+    "editor.fontFamily": "Operator Mono", // always best
+
+    // JetBrains Mono
+    // https://www.jetbrains.com/de-de/lp/mono/
+    // "editor.fontFamily": "JetBrains Mono",
+    // "editor.fontSize": 13,
+    // "editor.fontWeight": "400",
+    // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
+
+    // Monaspace
+    // https://monaspace.githubnext.com/
+    // "editor.fontFamily": "Monaspace Neon Var",
+    // "editor.fontSize": 14,
+    // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
+
+    "editor.renderControlCharacters": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.tabCompletion": "on",
+    "editor.suggestSelection": "first",
+    "editor.wordWrapColumn": 140,
+    "editor.suggest.showTypeParameters": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.accessibilitySupport": "off",
+    "editor.minimap.enabled": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.lineNumbers": "relative", // change this to relative for VIM
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+    },
+
+    // workbench settings
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)", // always best
+    // "workbench.colorTheme": "Catppuccin Mocha", // good light theme
+    // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 15,
+    "workbench.activityBar.location": "top",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editorAssociations": {
+        "*.mp4": "default"
+    },
+    "workbench.colorCustomizations": {
+        "list.inactiveSelectionBackground": "#fff67d26" // with monokai pro this is much nicer
+    },
+    "workbench.preferredLightColorTheme": "Quiet Light",
+
+    // explorer settings
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+
+    // terminal settings
+    "terminal.integrated.fontSize": 13,
+    "terminal.external.osxExec": "iTerm",
+    "terminal.integrated.env.osx": {},
+
+    // prettier settings
+    "prettier.trailingComma": "none",
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+
+    // default formatter
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // formatting settings
+    "html.format.unformatted": "br",
+    "html.format.wrapLineLength": 200,
+    "html.format.wrapAttributes": "force-aligned",
+
+    // import settings
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.importModuleSpecifier": "project-relative",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+
+    // breadcrumbs settings
+    "breadcrumbs.icons": false,
+    "breadcrumbs.showClasses": false,
+    "breadcrumbs.showEnumMembers": false,
+    "breadcrumbs.showConstructors": false,
+    "breadcrumbs.showConstants": false,
+    "breadcrumbs.showBooleans": false,
+    "breadcrumbs.showEnums": false,
+    "breadcrumbs.showEvents": false,
+    "breadcrumbs.showFields": false,
+    "breadcrumbs.showFunctions": false,
+    "breadcrumbs.showInterfaces": false,
+    "breadcrumbs.showKeys": false,
+    "breadcrumbs.showMethods": false,
+    "breadcrumbs.showModules": false,
+    "breadcrumbs.showNamespaces": false,
+    "breadcrumbs.symbolPath": "off",
+    "breadcrumbs.symbolSortOrder": "name",
+    "breadcrumbs.showNull": false,
+    "breadcrumbs.showNumbers": true,
+    "breadcrumbs.showObjects": false,
+    "breadcrumbs.showOperators": false,
+    "breadcrumbs.showProperties": false,
+    "breadcrumbs.showStrings": false,
+    "breadcrumbs.showStructs": false,
+    "breadcrumbs.showTypeParameters": false,
+    "breadcrumbs.showVariables": false,
+
+    // general settings
+    "extensions.ignoreRecommendations": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "application.shellEnvironmentResolutionTimeout": 20,
+    // "java.jdt.ls.java.home": "/Users/paulnaber/Documents/jdk-17.0.7.jdk/Contents/Home",
+    // "quarkus.tools.alwaysShowWelcomePage": false,
+
+    // git settings
+    "git.confirmSync": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "git.path": "/usr/local/Cellar/git/2.31.0/bin/git",
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+
+    // gitlens settings
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.views.commits.avatars": false,
+    "gitlens.menus": {
+        "editor": {
+            "blame": false,
+            "clipboard": true,
+            "compare": true,
+            "history": false,
+            "remote": false
+        },
+        "editorGroup": {
+            "blame": true,
+            "compare": true
+        },
+        "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "scm": {
+            "graph": true
+        },
+        "scmRepositoryInline": {
+            "graph": true
+        },
+        "scmRepository": {
+            "authors": true,
+            "graph": false
+        },
+        "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true
+        },
+        "scmItemInline": {},
+        "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": false,
+            "stash": true
+        }
+    },
+    "gitlens.statusBar.enabled": false,
+    "gitlens.hovers.avatars": false,
+    "gitlens.graph.showRemoteNames": true,
+    "gitlens.autolinks": [
+        {
+            "prefix": "MEL-",
+            "url": "https://crm.inside-m2m.de/jira/browse/MEL-<num>"
+        }
+    ],
+
+    // ai settings
+    "continue.enableTabAutocomplete": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false,
+        "yaml": true,
+        "scss": false
+    },
+
+    // custom js and css
+    "vscode_custom_css.imports": ["file:///Users/paulnaber/.vscode/style.css"],
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    // VIM
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "j"],
+            "after": ["<ESC>"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["J"],
+            "after": ["5", "j"]
+        },
+        {
+            "before": ["K"],
+            "after": ["5", "k"]
+        },
+        {
+            "before": ["<Leader>", "j"],
+            "after": ["J"]
+        },
+        // easier switching between splits
+        {
+            "before": ["<C-h>"],
+            "after": ["<C-w>", "h"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-w>", "j"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-w>", "k"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["<C-w>", "l"]
+        },
+        // easier tab handling
+        {
+            "before": ["<Leader>", "t", "t"],
+            "commands": [":tabnew"]
+        },
+        {
+            "before": ["<Leader>", "t", "n"],
+            "commands": [":tabnext"]
+        },
+        {
+            "before": ["<Leader>", "t", "p"],
+            "commands": [":tabprev"]
+        },
+        {
+            "before": ["<Leader>", "t", "o"],
+            "commands": [":tabo"]
+        },
+        // vs code actions
+        {
+            "before": ["leader", "w"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<Leader>", "t"],
+            "commands": ["workbench.action.gotoSymbol"]
+        },
+        {
+            "before": ["<Leader>", "p"],
+            "commands": ["workbench.action.showCommands"]
+        }
+    ]
+}
