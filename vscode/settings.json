@@ -7,6 +7,7 @@
     "editor.fontSize": 14,
     "editor.fontWeight": "400",
     "editor.fontFamily": "Operator Mono", // always best
+    "editor.cursorSurroundingLines": 8,
 
     // JetBrains Mono
     // https://www.jetbrains.com/de-de/lp/mono/
@@ -32,7 +33,7 @@
     "editor.accessibilitySupport": "off",
     "editor.minimap.enabled": false,
     "editor.minimap.renderCharacters": false,
-    "editor.lineNumbers": "relative", // change this to relative for VIM
+    // "editor.lineNumbers": "relative", // change this to relative for VIM
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "always"
@@ -231,7 +232,16 @@
 
     // VIM
     "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
     "vim.leader": "<space>",
+    "editor.scrollBeyondLastLine": false, // recommended by neovim
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#a9dc7660",
+    "vim.highlightedyank.duration": 250,
     "vim.insertModeKeyBindingsNonRecursive": [
         {
             "before": ["j", "j"],
@@ -253,22 +263,35 @@
         },
         // easier switching between splits
         {
-            "before": ["<C-h>"],
+            "before": ["<C-h>"], // same as in tmux
             "after": ["<C-w>", "h"]
         },
         {
-            "before": ["<C-j>"],
+            "before": ["<C-j>"], // same as in tmux
             "after": ["<C-w>", "j"]
         },
         {
-            "before": ["<C-k>"],
+            "before": ["<C-k>"], // same as in tmux
             "after": ["<C-w>", "k"]
         },
         {
-            "before": ["<C-l>"],
+            "before": ["<C-l>"], // same as in tmux
             "after": ["<C-w>", "l"]
         },
+        // splitting screens
+        {
+            "before": ["<C-a>", "%"], // tmux binding
+            "after": ["<C-w>", "v"] // nvim binding
+        },
+        { "before": ["leader", "v"], "commands": [":vsplit"] }
+        {
+            "before": ["<C-a>", "\""], // tmux binding (doesn not work)
+            "after": ["<C-w>", "s"] // nvim binding
+        },
         // easier tab handling
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+        { "before": ["leader", "s"], "commands": [":split"] }
         {
             "before": ["<Leader>", "t", "t"],
             "commands": [":tabnew"]
@@ -297,6 +320,38 @@
         {
             "before": ["<Leader>", "p"],
             "commands": ["workbench.action.showCommands"]
+        },
+        // explorer
+        {
+            "before": ["<C-n>"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "key": "space e",
+            "command": "workbench.action.toggleSidebarVisibility",
+            "when": "filesExplorerFocus && !inputFocus"
         }
+        // harpoon https://marketplace.visualstudio.com/items?itemName=tobias-z.vscode-harpoon
+        // {
+        //     "before": ["<leader>", "a"],
+        //     "commands": ["vscode-harpoon.addEditor"]
+        // },
+        // {
+        //     "before": ["<leader>", "e"],
+        //     "commands": ["vscode-harpoon.editEditors"]
+        // },
+        // {
+        //     "before": ["<leader>", "p", "e"],
+        //     "commands": ["vscode-harpoon.editorQuickPick"]
+        // },
+        // {
+        //     "before": ["<leader>", "1"],
+        //     "commands": ["vscode-harpoon.gotoEditor1"]
+        // }
+        // open files switcher
+        // {
+        //     "before": ["<C-e>"],
+        //     "after": ["workbench.action.quickOpenNavigateNextInEditorPicker"]
+        // }
     ]
 }
