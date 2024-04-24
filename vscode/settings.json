@@ -232,9 +232,9 @@
 
     // VIM
     "vim.hlsearch": true,
-    "vim.smartRelativeLine": true,
+    "vim.smartRelativeLine": false,
     "vim.leader": "<space>",
-    "editor.scrollBeyondLastLine": false, // recommended by neovim
+    "editor.scrollBeyondLastLine": true, // recommended by neovim
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -248,6 +248,14 @@
             "after": ["<ESC>"]
         }
     ],
+    // IMPORTANT KEYMAPS
+    // ctrl (caps) + h | j | k | l     -> switching between splits
+    // shift + h | l                   -> tab switching
+    // leader (space) + v | s          -> create splitt
+    // leader (space) + tt             -> new tab
+    // leader (space) + to             -> close other tabs
+    // leader (space) + w              -> save file
+    // ctrl (caps) e | n               -> open explorer (pref cmd shift e for toggle)
     "vim.normalModeKeyBindings": [
         {
             "before": ["J"],
@@ -261,54 +269,47 @@
             "before": ["<Leader>", "j"],
             "after": ["J"]
         },
-        // easier switching between splits
+        // EASIER SWITCHING BETWEEN SPLITS
         {
             "before": ["<C-h>"], // same as in tmux
-            "after": ["<C-w>", "h"]
+            "after": ["<C-w>", "h"] // same as in nvim
         },
         {
             "before": ["<C-j>"], // same as in tmux
-            "after": ["<C-w>", "j"]
+            "after": ["<C-w>", "j"] // same as in nvim
         },
         {
             "before": ["<C-k>"], // same as in tmux
-            "after": ["<C-w>", "k"]
+            "after": ["<C-w>", "k"] // same as in nvim
         },
         {
             "before": ["<C-l>"], // same as in tmux
-            "after": ["<C-w>", "l"]
+            "after": ["<C-w>", "l"] // same as in nvim
         },
-        // splitting screens
+        // SPLITTING SCREENS
         {
             "before": ["<C-a>", "%"], // tmux binding
             "after": ["<C-w>", "v"] // nvim binding
         },
-        { "before": ["leader", "v"], "commands": [":vsplit"] }
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
         {
             "before": ["<C-a>", "\""], // tmux binding (doesn not work)
             "after": ["<C-w>", "s"] // nvim binding
         },
-        // easier tab handling
+        { "before": ["leader", "s"], "commands": [":split"] },
+        // EASIER TAB HANDLING
         { "before": ["<S-h>"], "commands": [":bprevious"] },
         { "before": ["<S-l>"], "commands": [":bnext"] },
-        { "before": ["leader", "s"], "commands": [":split"] }
+        // new tab
         {
             "before": ["<Leader>", "t", "t"],
             "commands": [":tabnew"]
         },
         {
-            "before": ["<Leader>", "t", "n"],
-            "commands": [":tabnext"]
-        },
-        {
-            "before": ["<Leader>", "t", "p"],
-            "commands": [":tabprev"]
-        },
-        {
             "before": ["<Leader>", "t", "o"],
             "commands": [":tabo"]
         },
-        // vs code actions
+        // VS CODE ACTIONS
         {
             "before": ["leader", "w"],
             "commands": ["workbench.action.files.save"]
@@ -321,15 +322,16 @@
             "before": ["<Leader>", "p"],
             "commands": ["workbench.action.showCommands"]
         },
-        // explorer
+        // EXPLORER
+        // these command only work to go there
+        // it is not quite the same as using cmd shift e
         {
-            "before": ["<C-n>"],
+            "before": ["<C-e>"],
             "commands": ["workbench.view.explorer"]
         },
         {
-            "key": "space e",
-            "command": "workbench.action.toggleSidebarVisibility",
-            "when": "filesExplorerFocus && !inputFocus"
+            "before": ["<C-n>"],
+            "commands": ["workbench.view.explorer"]
         }
         // harpoon https://marketplace.visualstudio.com/items?itemName=tobias-z.vscode-harpoon
         // {
@@ -347,11 +349,6 @@
         // {
         //     "before": ["<leader>", "1"],
         //     "commands": ["vscode-harpoon.gotoEditor1"]
-        // }
-        // open files switcher
-        // {
-        //     "before": ["<C-e>"],
-        //     "after": ["workbench.action.quickOpenNavigateNextInEditorPicker"]
         // }
     ]
 }
