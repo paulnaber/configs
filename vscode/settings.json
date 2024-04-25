@@ -8,6 +8,7 @@
     "editor.fontWeight": "400",
     "editor.fontFamily": "Operator Mono", // always best
     "editor.cursorSurroundingLines": 8,
+    "window.commandCenter": false,
 
     // JetBrains Mono
     // https://www.jetbrains.com/de-de/lp/mono/
@@ -256,6 +257,7 @@
     // leader (space) + to             -> close other tabs
     // leader (space) + w              -> save file
     // ctrl (caps) e | n               -> open explorer (pref cmd shift e for toggle)
+    // check this -> https://www.lazyvim.org/keymaps <- for more vim mappings
     "vim.normalModeKeyBindings": [
         {
             "before": ["J"],
@@ -322,6 +324,10 @@
             "before": ["<Leader>", "p"],
             "commands": ["workbench.action.showCommands"]
         },
+        {
+            "before": ["<Leader>","g", "c", "r"],
+            "commands": ["workbench.action.rename"]
+        },
         // EXPLORER
         // these command only work to go there
         // it is not quite the same as using cmd shift e
@@ -332,6 +338,15 @@
         {
             "before": ["<C-n>"],
             "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["<Leader>", "e"],
+            "commands": ["workbench.view.explorer"]
+        }
+        // FIND
+        {
+            "before": ["<Leader>", "f"],
+            "commands": ["workbench.view.search"]
         }
         // harpoon https://marketplace.visualstudio.com/items?itemName=tobias-z.vscode-harpoon
         // {
@@ -350,5 +365,5 @@
         //     "before": ["<leader>", "1"],
         //     "commands": ["vscode-harpoon.gotoEditor1"]
         // }
-    ]
+    ],
 }
