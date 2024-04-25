@@ -233,7 +233,7 @@
 
     // VIM
     "vim.hlsearch": true,
-    "vim.smartRelativeLine": false,
+    "vim.smartRelativeLine": true,
     "vim.leader": "<space>",
     "editor.scrollBeyondLastLine": true, // recommended by neovim
     "vim.easymotion": true,
@@ -257,6 +257,8 @@
     // leader (space) + to             -> close other tabs
     // leader (space) + w              -> save file
     // ctrl (caps) e | n               -> open explorer (pref cmd shift e for toggle)
+    // leader (space) space            -> quick open file search
+    // leader (space) tab              -> see open tabs - use it with enter to quickly go back to last file (ctrl tab basically)
     // check this -> https://www.lazyvim.org/keymaps <- for more vim mappings
     "vim.normalModeKeyBindings": [
         {
@@ -324,8 +326,20 @@
             "before": ["<Leader>", "p"],
             "commands": ["workbench.action.showCommands"]
         },
+        // quick find file - root
         {
-            "before": ["<Leader>","g", "c", "r"],
+            "before": ["<Leader>", "space"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        // see all open tabs and navigate between them
+        {
+            "before": ["<Leader>", "tab"],
+            "commands": [
+                "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+            ]
+        },
+        {
+            "before": ["<Leader>", "g", "c", "r"],
             "commands": ["workbench.action.rename"]
         },
         // EXPLORER
@@ -342,7 +356,7 @@
         {
             "before": ["<Leader>", "e"],
             "commands": ["workbench.view.explorer"]
-        }
+        },
         // FIND
         {
             "before": ["<Leader>", "f"],
@@ -365,5 +379,5 @@
         //     "before": ["<leader>", "1"],
         //     "commands": ["vscode-harpoon.gotoEditor1"]
         // }
-    ],
+    ]
 }
