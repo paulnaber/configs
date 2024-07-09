@@ -45,5 +45,19 @@
         "key": "p",
         "command": "filesExplorer.paste",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "e",
+        "command": "workbench.action.lastEditorInGroup",
+        // "runCommands": [
+        //     "workbench.view.explorer",
+        //     "workbench.action.toggleSidebarVisibility"
+        // ],
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.lastEditorInGroup",
+        "when": "!editorTextFocus"
     }
 ]

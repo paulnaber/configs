@@ -1,14 +1,16 @@
 {
     // editor settings
+    // "editor.fontSize": 14,
+
     // Operator Mono
     // https://www.typography.com/blog/introducing-operator
     // this font uses kind of handwriting for italics
     // comments for example are italic and therefore look very nice
-    "editor.fontSize": 14,
-    "editor.fontWeight": "400",
-    "editor.fontFamily": "Operator Mono", // always best
-    "editor.cursorSurroundingLines": 8,
-    "window.commandCenter": false,
+    // "editor.fontSize": 14,
+    // "editor.fontWeight": "400",
+    // "editor.fontFamily": "Operator Mono", // always best
+    // "editor.cursorSurroundingLines": 8,
+    // "window.commandCenter": false,
 
     // JetBrains Mono
     // https://www.jetbrains.com/de-de/lp/mono/
@@ -19,9 +21,10 @@
 
     // Monaspace
     // https://monaspace.githubnext.com/
-    // "editor.fontFamily": "Monaspace Neon Var",
-    // "editor.fontSize": 14,
-    // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
+    "editor.fontFamily": "Monaspace Neon Var",
+    "editor.fontSize": 14,
+    "editor.fontWeight": 300,
+    "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
     "editor.renderControlCharacters": false,
     "editor.bracketPairColorization.enabled": true,
@@ -32,7 +35,6 @@
     "editor.stickyScroll.enabled": true,
     "editor.inlineSuggest.enabled": true,
     "editor.accessibilitySupport": "off",
-    "editor.minimap.enabled": false,
     "editor.minimap.renderCharacters": false,
     // "editor.lineNumbers": "relative", // change this to relative for VIM
     "editor.formatOnSave": true,
@@ -46,13 +48,13 @@
     // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
-    "workbench.activityBar.location": "top",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editorAssociations": {
         "*.mp4": "default"
     },
     "workbench.colorCustomizations": {
-        "list.inactiveSelectionBackground": "#fff67d26" // with monokai pro this is much nicer
+        "list.inactiveSelectionBackground": "#fff67d26", // with monokai pro this is much nicer
+        "editor.foldBackground": "#ff000000" // makes folded code or comments less visible
     },
     "workbench.preferredLightColorTheme": "Quiet Light",
 
@@ -140,8 +142,10 @@
     "javascript.suggest.completeFunctionCalls": true,
     "javascript.inlayHints.parameterTypes.enabled": true,
     "application.shellEnvironmentResolutionTimeout": 20,
-    // "java.jdt.ls.java.home": "/Users/paulnaber/Documents/jdk-17.0.7.jdk/Contents/Home",
-    // "quarkus.tools.alwaysShowWelcomePage": false,
+    "quarkus.tools.alwaysShowWelcomePage": false,
+    // "java.server.launchMode": "Standard",
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home",
+    "java.format.settings.url": "/Users/paulnaber/Documents/im2m-codings-master/standard_im2m.xml",
 
     // git settings
     "git.confirmSync": false,
@@ -217,7 +221,7 @@
     ],
 
     // ai settings
-    "continue.enableTabAutocomplete": false,
+    "continue.enableTabAutocomplete": true,
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
@@ -249,6 +253,10 @@
             "after": ["<ESC>"]
         }
     ],
+    // To improve performance
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
     // IMPORTANT KEYMAPS
     // ctrl (caps) + h | j | k | l     -> switching between splits
     // shift + h | l                   -> tab switching
@@ -327,6 +335,7 @@
             "commands": ["workbench.action.showCommands"]
         },
         // quick find file - root
+        // under mac os make sure to disable . or stop on double space!
         {
             "before": ["<Leader>", "space"],
             "commands": ["workbench.action.quickOpen"]
@@ -379,5 +388,18 @@
         //     "before": ["<leader>", "1"],
         //     "commands": ["vscode-harpoon.gotoEditor1"]
         // }
-    ]
+    ],
+    "workbench.startupEditor": "none",
+    "terminal.integrated.inheritEnv": false,
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDragAndDrop": false,
+    "jupyter.logging.level": "error",
+    "continue.showInlineTip": false,
+    "supermaven.enable": {
+        "*": true
+    },
+    "editor.minimap.autohide": true,
+    "java.inlayHints.parameterNames.enabled": "none",
+    "scm.experimental.showHistoryGraph": true,
+    "workbench.activityBar.location": "top"
 }

@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # thefuck
-plugins=(git zsh-autosuggestions z)
+plugins=(git zsh-autosuggestions z vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 PS1='[%2d] $ '
@@ -110,17 +110,14 @@ PS1='[%2d] $ '
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # set java home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+alias java17="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
+alias java11="export JAVA_HOME=/Users/paulnaber/Documents/Java/jdk-11.0.22.jdk/Contents/Home"
 
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias ls="colorls"
+alias lg=lazygit
 
-# alias j8="export JAVA_HOME=`/usr/libexec/java_home -v1.8`"
-# alias j11="export JAVA_HOME=`/usr/libexec/java_home -v11`"
-# alias j17="export JAVA_HOME=`/usr/libexec/java_home -v17`"
-# alias j19="export JAVA_HOME=`/usr/libexec/java_home -v19`"
-alias oracle17="export JAVA_HOME=/Users/paulnaber/Documents/jdk-17.0.7.jdk/Contents/Home"
-oracle17
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
@@ -149,3 +146,24 @@ export PATH="$PATH:/Applications/WebStorm.app/Contents/MacOS"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/paulnaber/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/paulnaber/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/paulnaber/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/paulnaber/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/Users/paulnaber/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/paulnaber/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+# aider
