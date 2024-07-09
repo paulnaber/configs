@@ -1,0 +1,10 @@
+{
+  "keyMappings": "map <c-h> previousTab\nmap <c-l> nextTab\nmap H previousTab\nmap L nextTab",
+  "settingsVersion": "2.1.2",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://www.vim-hero.com/*"
+    }
+  ]
+}

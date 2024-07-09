@@ -9,4 +9,5 @@ cp ~/Library/Application\ Support/Code/User/keybindings.json ~/Documents/Project
 cp ~/.p10k.zsh ~/Documents/Projects/configs/terminal
 cp -R ~/.config/nvim ~/Documents/Projects/configs
 cp ~/.gitconfig ~/Documents/Projects/configs/git/
- cp ~/Library/Application\ Support/lazygit/config.yml ~/Documents/Projects/configs/git/lazygit/
+cp ~/Library/Application\ Support/lazygit/config.yml ~/Documents/Projects/configs/git/lazygit/
+cp ~/Downloads/vimium-options.json ~/Documents/Projects/configs/vimium-options.json
