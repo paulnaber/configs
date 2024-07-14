@@ -1,6 +1,7 @@
 {
     // editor settings
     // "editor.fontSize": 14,
+    "editor.cursorSurroundingLines": 8,
 
     // Operator Mono
     // https://www.typography.com/blog/introducing-operator
@@ -36,7 +37,6 @@
     "editor.inlineSuggest.enabled": true,
     "editor.accessibilitySupport": "off",
     "editor.minimap.renderCharacters": false,
-    // "editor.lineNumbers": "relative", // change this to relative for VIM
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "always"
@@ -46,6 +46,7 @@
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)", // always best
     // "workbench.colorTheme": "Catppuccin Mocha", // good light theme
     // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
+    "workbench.settings.editor": "json", // opens in json by default
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
     "workbench.editor.highlightModifiedTabs": true,
@@ -63,7 +64,7 @@
     "explorer.compactFolders": false,
 
     // terminal settings
-    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontSize": 15,
     "terminal.external.osxExec": "iTerm",
     "terminal.integrated.env.osx": {},
 
@@ -237,7 +238,7 @@
 
     // VIM
     "vim.hlsearch": true,
-    "vim.smartRelativeLine": true,
+    "vim.smartRelativeLine": false, // with easymotion or just / this is not needed
     "vim.leader": "<space>",
     "editor.scrollBeyondLastLine": true, // recommended by neovim
     "vim.easymotion": true,
@@ -258,30 +259,45 @@
         "vscodevim.vim": 1
     },
     // IMPORTANT KEYMAPS
+    // ### tabs and windows
+    // ctrl (caps) e                   -> open explorer (pref cmd shift e for toggle)
     // ctrl (caps) + h | j | k | l     -> switching between splits
     // shift + h | l                   -> tab switching
     // leader (space) + v | s          -> create splitt
     // leader (space) + tt             -> new tab
     // leader (space) + to             -> close other tabs
+    // leader (space) + td             -> close currtent tab
     // leader (space) + w              -> save file
-    // ctrl (caps) e | n               -> open explorer (pref cmd shift e for toggle)
-    // leader (space) space            -> quick open file search
+    // ### quickjumps
     // leader (space) tab              -> see open tabs - use it with enter to quickly go back to last file (ctrl tab basically)
+    // ctrl (caps) + o | i             -> jump back and forth
+    // ### Search
+    // leader (space) space            -> quick open file search
+    // leader (space) + p              -> quick open file search
+    // leader (space) /                -> grep search (file content)
+    // leader (space) f                -> search side panel
+    // ### easymotion
+    // s                               -> easymotion character find - similar to leap
+    // leader leader + /               -> easymotion character find - similar to leap - currently disabled for quickopen
+    // leader leader + w               -> easymotion jump to word - currently disabled for quickopen
+    // leader gg                       -> lazygit (lazygit extension required)
     // check this -> https://www.lazyvim.org/keymaps <- for more vim mappings
     "vim.normalModeKeyBindings": [
         {
             "before": ["J"],
-            "after": ["5", "j"]
+            // "after": ["5", "j", "z", "z"]
+            "after": ["j", "z", "z"]
         },
         {
             "before": ["K"],
-            "after": ["5", "k"]
+            // "after": ["5", "k", "z", "z"]
+            "after": ["k", "z", "z"]
         },
         {
             "before": ["<Leader>", "j"],
             "after": ["J"]
         },
-        // EASIER SWITCHING BETWEEN SPLITS
+        // SWITCHING BETWEEN SPLITS
         {
             "before": ["<C-h>"], // same as in tmux
             "after": ["<C-w>", "h"] // same as in nvim
@@ -309,10 +325,9 @@
             "after": ["<C-w>", "s"] // nvim binding
         },
         { "before": ["leader", "s"], "commands": [":split"] },
-        // EASIER TAB HANDLING
+        // SWITCHING BETWEEN TABS
         { "before": ["<S-h>"], "commands": [":bprevious"] },
         { "before": ["<S-l>"], "commands": [":bnext"] },
-        // new tab
         {
             "before": ["<Leader>", "t", "t"],
             "commands": [":tabnew"]
@@ -321,7 +336,10 @@
             "before": ["<Leader>", "t", "o"],
             "commands": [":tabo"]
         },
-        // VS CODE ACTIONS
+        {
+            "before": ["<Leader>", "t", "d"],
+            "commands": [":tabc"]
+        },
         {
             "before": ["leader", "w"],
             "commands": ["workbench.action.files.save"]
@@ -333,12 +351,6 @@
         {
             "before": ["<Leader>", "p"],
             "commands": ["workbench.action.showCommands"]
-        },
-        // quick find file - root
-        // under mac os make sure to disable . or stop on double space!
-        {
-            "before": ["<Leader>", "space"],
-            "commands": ["workbench.action.quickOpen"]
         },
         // see all open tabs and navigate between them
         {
@@ -352,42 +364,60 @@
             "commands": ["workbench.action.rename"]
         },
         // EXPLORER
-        // these command only work to go there
         // it is not quite the same as using cmd shift e
-        {
-            "before": ["<C-e>"],
-            "commands": ["workbench.view.explorer"]
-        },
-        {
-            "before": ["<C-n>"],
-            "commands": ["workbench.view.explorer"]
-        },
         {
             "before": ["<Leader>", "e"],
             "commands": ["workbench.view.explorer"]
         },
-        // FIND
+        // FIND and SEARCH
         {
             "before": ["<Leader>", "f"],
             "commands": ["workbench.view.search"]
+        },
+        // fzf search - more like nvim - extension required and some linux tools like fzf
+        {
+            "before": ["leader", "space"],
+            "commands": ["find-it-faster.findFiles"]
+        },
+        {
+            "before": ["leader", "/"],
+            "commands": ["find-it-faster.findWithinFiles"]
+        },
+        // vscode searches
+        // {
+        //     "before": ["<Leader>", "space"],
+        //     "commands": ["workbench.action.quickOpen"]
+        // },
+        // {
+        //     "before": ["<Leader>", "/"],
+        //     "commands": ["workbench.action.quickTextSearch"]
+        // },
+        // LAZYGIT
+        {
+            "before": ["<Leader>", "g", "g"],
+            "commands": ["lazygit.openLazygit"]
         }
-        // harpoon https://marketplace.visualstudio.com/items?itemName=tobias-z.vscode-harpoon
-        // {
-        //     "before": ["<leader>", "a"],
-        //     "commands": ["vscode-harpoon.addEditor"]
-        // },
-        // {
-        //     "before": ["<leader>", "e"],
-        //     "commands": ["vscode-harpoon.editEditors"]
-        // },
-        // {
-        //     "before": ["<leader>", "p", "e"],
-        //     "commands": ["vscode-harpoon.editorQuickPick"]
-        // },
-        // {
-        //     "before": ["<leader>", "1"],
-        //     "commands": ["vscode-harpoon.gotoEditor1"]
-        // }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // easymotion
+        {
+            "before": ["s"],
+            "after": ["leader", "leader", "/"]
+            // use this for bidirectional easymotion
+            // "after": ["leader", "leader", "leader", "b", "d", "w"]
+        },
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["U"],
+            "commands": ["redo"]
+        },
+        {
+            "before": ["leader", "leader", "s"],
+            "commands": ["editor.action.formatDocument"]
+        }
     ],
     "workbench.startupEditor": "none",
     "terminal.integrated.inheritEnv": false,
@@ -396,7 +426,7 @@
     "jupyter.logging.level": "error",
     "continue.showInlineTip": false,
     "supermaven.enable": {
-        "*": true
+        "*": false
     },
     "editor.minimap.autohide": true,
     "java.inlayHints.parameterNames.enabled": "none",
