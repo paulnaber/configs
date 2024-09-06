@@ -140,6 +140,12 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="$PATH:/Applications/WebStorm.app/Contents/MacOS"
 
+# intellij
+function idea() {
+    open -a "IntelliJ IDEA CE" "$1"
+}
+
+
 # bun completions
 [ -s "/Users/paulnaber/.bun/_bun" ] && source "/Users/paulnaber/.bun/_bun"
 
@@ -167,3 +173,67 @@ fi
 # <<< conda initialize <<<
 
 # aider
+faider() {
+    local dir_exclusions=('.git' '__pycache__' 'node_modules')
+    local file_exclusions=('.aider*' '__init__.py' '*.log')
+    local find_args=()
+    local selected_items
+    local files_to_add=()
+ 
+    # Add directory exclusions
+    for dir_exclusion in "${dir_exclusions[@]}"; do
+        find_args+=(! -path "*/$dir_exclusion" ! -path "*/$dir_exclusion/*")
+    done
+ 
+    # Add file exclusions
+    for file_exclusion in "${file_exclusions[@]}"; do
+        find_args+=(! -name "$file_exclusion")
+    done
+ 
+    # Add exclusions from .aiderignore if it exists
+    if [ -f ".aiderignore" ]; then
+        while IFS= read -r line || [[ -n $line ]]; do
+            # Skip empty lines and comments
+            [[ $line = \#* ]] || [[ -z $line ]] && continue
+            # Trim leading and trailing whitespace
+            line=$(echo "$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            # Check if the line is a directory pattern
+            if [[ $line == */ ]]; then
+                # Remove the trailing '/' for directory exclusion
+                local dir=${line%/}
+                find_args+=(! -path "*/$dir" ! -path "*/$dir/*")
+            else
+                find_args+=(! -path "*/$line" ! -name "$line")
+            fi
+        done < .aiderignore
+    fi
+ 
+    # Run find command and select files/directories with fzf
+    if [[ -n $ZSH_VERSION ]]; then
+        # Zsh specific command
+        selected_items=("${(@f)$(find . \( -type f -o -type d \) "${find_args[@]}" -print | fzf --multi --exit-0)}")
+    else
+        # Bash specific command
+        IFS=$'\n' read -d '' -r -a selected_items < <(find . \( -type f -o -type d \) "${find_args[@]}" -print | fzf --multi --exit-0)
+    fi
+ 
+    # Process selected items
+    for item in "${selected_items[@]}"; do
+        if [ -d "$item" ]; then
+            # If it's a directory, find all files within it (respecting exclusions)
+            while IFS= read -r -d '' file; do
+                files_to_add+=("$file")
+            done < <(find "$item" -type f "${find_args[@]}" -print0)
+        elif [ -f "$item" ]; then
+            # If it's a file, add it directly
+            files_to_add+=("$item")
+        fi
+    done
+ 
+    # Check if any files were found to add
+    if [ ${#files_to_add[@]} -gt 0 ]; then
+        aider "${files_to_add[@]}"
+    else
+        echo "No files selected or found in selected directories."
+    fi
+}
