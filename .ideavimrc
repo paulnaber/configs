@@ -4,6 +4,7 @@ set incsearch
 set surround
 set easymotion
 set highlightedyank
+set commentary
 
 " Use system clipboard for yank, delete, change, and put
 set clipboard=unnamed
@@ -43,15 +44,11 @@ nmap <leader>to :tabonly<CR>
 " Save file
 nmap <leader>w :w<CR>
 
-" Quick open file search
-nmap <leader><space> :action GotoFile<CR>
-nmap <leader>p :action GotoFile<CR>
-
-" Search in files
+" Search
+nmap <leader><leader> :action SearchEverywhere<CR>
 nmap <leader>/ :action FindInPath<CR>
-
-" Open search side panel
-nmap <leader>f :action SearchEverywhere<CR>
+nmap <leader>f :action GotoFile<CR>
+nmap <leader>p :action GotoAction<CR>
 
 " Explorer
 nmap <leader>e :action ActivateProjectToolWindow<CR>
@@ -59,12 +56,13 @@ nmap <leader>e :action ActivateProjectToolWindow<CR>
 " Jump between recent files (quick open tabs)
 nmap <leader><Tab> :action RecentFiles<CR>
 
-" EasyMotion-like navigation
+" EasyMotion
 nmap s <Plug>(easymotion-bd-w)
-nmap <leader><leader>w <Plug>(easymotion-W)
 
 " LazyGit integration (requires the LazyGit plugin)
-nmap <leader>gg :action Lazygit<CR>
+nmap <leader>gg :action LazyGit.Open<CR>
+
+nnoremap <leader>gr :action RenameElement<CR>
 
 " Format document
 nmap <leader><leader>s :action ReformatCode<CR>
