@@ -1,7 +1,7 @@
 {
     // editor settings
     // "editor.fontSize": 14,
-    "editor.cursorSurroundingLines": 8,
+    "editor.cursorSurroundingLines": 12,
 
     // Operator Mono
     // https://www.typography.com/blog/introducing-operator
@@ -54,7 +54,7 @@
         "*.mp4": "default"
     },
     "workbench.colorCustomizations": {
-        "list.inactiveSelectionBackground": "#fff67d26", // with monokai pro this is much nicer
+        // "list.inactiveSelectionBackground": "#fff67d26", // with monokai pro this is much nicer
         "editor.foldBackground": "#ff000000" // makes folded code or comments less visible
     },
     "workbench.preferredLightColorTheme": "Quiet Light",
@@ -64,7 +64,7 @@
     "explorer.compactFolders": false,
 
     // terminal settings
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 18,
     "terminal.external.osxExec": "iTerm",
     "terminal.integrated.env.osx": {},
 
@@ -222,7 +222,7 @@
     ],
 
     // ai settings
-    "continue.enableTabAutocomplete": true,
+    "continue.enableTabAutocomplete": false,
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
@@ -281,21 +281,33 @@
     // leader leader + /               -> easymotion character find - similar to leap - currently disabled for quickopen
     // leader leader + w               -> easymotion jump to word - currently disabled for quickopen
     // leader gg                       -> lazygit (lazygit extension required)
+    // leader leader + s               -> format file
     // check this -> https://www.lazyvim.org/keymaps <- for more vim mappings
     "vim.normalModeKeyBindings": [
         {
             "before": ["J"],
-            // "after": ["5", "j", "z", "z"]
-            "after": ["j", "z", "z"]
+            "after": ["5", "j", "z", "z"]
+            // "after": ["j", "z", "z"]
+            // "after": ["}"]
         },
         {
             "before": ["K"],
-            // "after": ["5", "k", "z", "z"]
-            "after": ["k", "z", "z"]
+            "after": ["5", "k", "z", "z"]
+            // "after": ["k", "z", "z"]
+            // "after": ["{"]
         },
         {
             "before": ["<Leader>", "j"],
             "after": ["J"]
+        },
+        // back and forth
+        {
+            "before": ["<C-i"],
+            "after": ["C", "S", "-"]
+        },
+        {
+            "before": ["<C-o"],
+            "after": ["C", "-"]
         },
         // SWITCHING BETWEEN SPLITS
         {
@@ -402,9 +414,9 @@
         // easymotion
         {
             "before": ["s"],
-            "after": ["leader", "leader", "/"]
+            // "after": ["leader", "leader", "/"]
             // use this for bidirectional easymotion
-            // "after": ["leader", "leader", "leader", "b", "d", "w"]
+            "after": ["leader", "leader", "leader", "b", "d", "w"]
         },
         {
             "before": ["u"],
@@ -426,10 +438,16 @@
     "jupyter.logging.level": "error",
     "continue.showInlineTip": false,
     "supermaven.enable": {
-        "*": false
+        "*": true
     },
     "editor.minimap.autohide": true,
     "java.inlayHints.parameterNames.enabled": "none",
     "scm.experimental.showHistoryGraph": true,
-    "workbench.activityBar.location": "top"
+    "workbench.activityBar.location": "top",
+    "find-it-faster.general.useTerminalInEditor": true,
+    "editor.minimap.enabled": false,
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on"
 }

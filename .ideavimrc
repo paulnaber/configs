@@ -1,0 +1,88 @@
+" Enable hlsearch and incsearch for search highlighting
+set hlsearch
+set incsearch
+set surround
+set easymotion
+set highlightedyank
+
+" Use system clipboard for yank, delete, change, and put
+set clipboard=unnamed
+
+" Define leader key as <Space>
+let mapleader = " "
+
+" Yank highlighting (IntelliJ doesn't directly support visual highlighting for yanks)
+" You might need a plugin or custom script for this.
+
+" Insert mode: 'jj' to exit to normal mode
+imap jj <Esc>
+
+" Switching between splits (Tmux-style bindings)
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" Split windows
+nmap <leader>v :vsplit<CR>
+nmap <leader>s :split<CR>
+
+" Tab navigation (previous/next tab)
+nmap <S-h> :tabprevious<CR>
+nmap <S-l> :tabnext<CR>
+
+" Open new tab
+nmap <leader>tt :tabnew<CR>
+
+" Close current tab
+nmap <leader>td :tabclose<CR>
+
+" Close all other tabs
+nmap <leader>to :tabonly<CR>
+
+" Save file
+nmap <leader>w :w<CR>
+
+" Quick open file search
+nmap <leader><space> :action GotoFile<CR>
+nmap <leader>p :action GotoFile<CR>
+
+" Search in files
+nmap <leader>/ :action FindInPath<CR>
+
+" Open search side panel
+nmap <leader>f :action SearchEverywhere<CR>
+
+" Explorer
+nmap <leader>e :action ActivateProjectToolWindow<CR>
+
+" Jump between recent files (quick open tabs)
+nmap <leader><Tab> :action RecentFiles<CR>
+
+" EasyMotion-like navigation
+nmap s <Plug>(easymotion-bd-w)
+nmap <leader><leader>w <Plug>(easymotion-W)
+
+" LazyGit integration (requires the LazyGit plugin)
+nmap <leader>gg :action Lazygit<CR>
+
+" Format document
+nmap <leader><leader>s :action ReformatCode<CR>
+
+" Jump 5 lines down and center the screen
+nmap J 5jzz
+
+" Jump 5 lines up and center the screen
+nmap K 5kzz
+
+" Hover
+nmap gh :action ShowHoverInfo<CR>
+
+
+" Undo/Redo
+nmap u :undo<CR>
+nmap U :redo<CR>
+
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'

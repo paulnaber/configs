@@ -22,6 +22,7 @@ prompt_and_copy() {
 
 prompt_and_copy "$HOME/Library/Application Support/Code/User/settings.json" "$HOME/Documents/Projects/configs/vscode"
 prompt_and_copy "$HOME/Library/Application Support/Code/User/keybindings.json" "$HOME/Documents/Projects/configs/vscode"
+prompt_and_copy "$HOME/.ideavimrc" "$HOME/Documents/Projects/configs/.ideavimrc"
 prompt_and_copy "$HOME/Downloads/vimium-options.json" "$HOME/Documents/Projects/configs/vimium-options.json"
 prompt_and_copy "$HOME/.zshrc" "$HOME/Documents/Projects/configs/terminal"
 prompt_and_copy "$HOME/Desktop/Profiles.json" "$HOME/Documents/Projects/configs/terminal/iTerm2/"
