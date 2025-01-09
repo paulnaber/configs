@@ -37,36 +37,40 @@
     "editor.inlineSuggest.enabled": true,
     "editor.accessibilitySupport": "off",
     "editor.minimap.renderCharacters": false,
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": "always"
-    },
-
-    // workbench settings
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)", // always best
+    "editor.formatOnSave": false,
+    "editor.minimap.autohide": true,
+    "editor.minimap.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    // "editor.foldingImportsByDefault": true
+    // "editor.codeActionsOnSave": {
+    //     "source.organizeImports": "always"
+    // }, // always best
     // "workbench.colorTheme": "Catppuccin Mocha", // good light theme
     // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
     "workbench.settings.editor": "json", // opens in json by default
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editorAssociations": {
         "*.mp4": "default"
     },
-    "workbench.colorCustomizations": {
-        // "list.inactiveSelectionBackground": "#fff67d26", // with monokai pro this is much nicer
-        "editor.foldBackground": "#ff000000" // makes folded code or comments less visible
-    },
-    "workbench.preferredLightColorTheme": "Quiet Light",
-
+    "workbench.activityBar.location": "top",
+    "workbench.editor.pinnedTabsOnSeparateRow": false,
+    "workbench.list.smoothScrolling": true,
     // explorer settings
     "explorer.confirmDelete": false,
     "explorer.compactFolders": false,
 
     // terminal settings
-    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontSize": 16,
     "terminal.external.osxExec": "iTerm",
     "terminal.integrated.env.osx": {},
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.inheritEnv": false,
 
     // prettier settings
     "prettier.trailingComma": "none",
@@ -145,7 +149,7 @@
     "application.shellEnvironmentResolutionTimeout": 20,
     "quarkus.tools.alwaysShowWelcomePage": false,
     // "java.server.launchMode": "Standard",
-    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home",
     "java.format.settings.url": "/Users/paulnaber/Documents/im2m-codings-master/standard_im2m.xml",
 
     // git settings
@@ -240,14 +244,16 @@
     "vim.hlsearch": true,
     "vim.smartRelativeLine": false, // with easymotion or just / this is not needed
     "vim.leader": "<space>",
-    "editor.scrollBeyondLastLine": true, // recommended by neovim
-    "vim.easymotion": true,
+    "editor.scrollBeyondLastLine": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "#a9dc7660",
     "vim.highlightedyank.duration": 250,
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "vim.easymotion": true,
+    "vim.statusBarColorControl": false,
     "vim.insertModeKeyBindingsNonRecursive": [
         {
             "before": ["j", "j"],
@@ -282,6 +288,7 @@
     // leader leader + w               -> easymotion jump to word - currently disabled for quickopen
     // leader gg                       -> lazygit (lazygit extension required)
     // leader leader + s               -> format file
+    // leader rr                       -> rename symbol
     // check this -> https://www.lazyvim.org/keymaps <- for more vim mappings
     "vim.normalModeKeyBindings": [
         {
@@ -408,6 +415,11 @@
         {
             "before": ["<Leader>", "g", "g"],
             "commands": ["lazygit.openLazygit"]
+        },
+        // Refactoring
+        {
+            "before": ["<Leader>", "r", "r"],
+            "commands": ["editor.action.rename"]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -432,7 +444,6 @@
         }
     ],
     "workbench.startupEditor": "none",
-    "terminal.integrated.inheritEnv": false,
     "git.openRepositoryInParentFolders": "never",
     "explorer.confirmDragAndDrop": false,
     "jupyter.logging.level": "error",
@@ -440,14 +451,7 @@
     "supermaven.enable": {
         "*": true
     },
-    "editor.minimap.autohide": true,
     "java.inlayHints.parameterNames.enabled": "none",
-    "scm.experimental.showHistoryGraph": true,
-    "workbench.activityBar.location": "top",
     "find-it-faster.general.useTerminalInEditor": true,
-    "editor.minimap.enabled": false,
-    "editor.smoothScrolling": true,
-    "workbench.list.smoothScrolling": true,
-    "terminal.integrated.smoothScrolling": true,
-    "editor.cursorSmoothCaretAnimation": "on"
+    "window.commandCenter": false,
 }
