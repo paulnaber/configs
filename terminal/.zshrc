@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # thefuck
-plugins=(git zsh-autosuggestions z vi-mode)
+plugins=(git zsh-autosuggestions z)
 
 source $ZSH/oh-my-zsh.sh
 PS1='[%2d] $ '
@@ -110,8 +110,8 @@ PS1='[%2d] $ '
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # set java home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
-alias java17="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
+export JAVA_HOME=/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home
+alias java17="export JAVA_HOME=/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home"
 alias java11="export JAVA_HOME=/Users/paulnaber/Documents/Java/jdk-11.0.22.jdk/Contents/Home"
 
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
@@ -143,6 +143,10 @@ export PATH="$PATH:/Applications/WebStorm.app/Contents/MacOS"
 # intellij
 function idea() {
     open -a "IntelliJ IDEA CE" "$1"
+}
+# webstorm
+function ws() {
+    open -a "Webstorm" "$1"
 }
 
 
@@ -237,3 +241,13 @@ faider() {
         echo "No files selected or found in selected directories."
     fi
 }
+
+export PATH="$PATH:/Users/paulnaber/Documents/bootdev/worldbanc/private/bin"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/Scripts
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

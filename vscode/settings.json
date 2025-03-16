@@ -37,15 +37,15 @@
     "editor.inlineSuggest.enabled": true,
     "editor.accessibilitySupport": "off",
     "editor.minimap.renderCharacters": false,
-    "editor.formatOnSave": false,
     "editor.minimap.autohide": true,
     "editor.minimap.enabled": false,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.smoothScrolling": true,
     // "editor.foldingImportsByDefault": true
-    // "editor.codeActionsOnSave": {
-    //     "source.organizeImports": "always"
-    // }, // always best
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+    }, // always best
     // "workbench.colorTheme": "Catppuccin Mocha", // good light theme
     // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
     "workbench.settings.editor": "json", // opens in json by default
@@ -449,9 +449,23 @@
     "jupyter.logging.level": "error",
     "continue.showInlineTip": false,
     "supermaven.enable": {
-        "*": true
+        "*": true,
+        "html": false,
+        "go": false
     },
     "java.inlayHints.parameterNames.enabled": "none",
     "find-it-faster.general.useTerminalInEditor": true,
     "window.commandCenter": false,
+    "gitlab.duoCodeSuggestions.enabled": false,
+    "gitlab.duoChat.enabled": false,
+    "gitlab.duo.enabledWithoutGitlabProject": false,
+    "gitlab.keybindingHints.enabled": false,
+    "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.preferredHighContrastLightColorTheme": "Monokai Pro Light",
+    "workbench.preferredLightColorTheme": "Monokai Pro Light",
+    "window.systemColorTheme": "auto",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredHighContrastColorTheme": "Monokai Pro (Filter Spectrum)",
+    "codesnap.containerPadding": "0",
+    "editor.cursorStyle": "line-thin"
 }
