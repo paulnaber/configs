@@ -2,6 +2,9 @@
     // editor settings
     // "editor.fontSize": 14,
     "editor.cursorSurroundingLines": 12,
+    "window.commandCenter": false,
+    "window.systemColorTheme": "auto",
+    "window.autoDetectColorScheme": true,
 
     // Operator Mono
     // https://www.typography.com/blog/introducing-operator
@@ -41,6 +44,7 @@
     "editor.minimap.enabled": false,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.smoothScrolling": true,
+    "editor.cursorStyle": "line-thin",
     // "editor.foldingImportsByDefault": true
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
@@ -50,6 +54,10 @@
     // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
     "workbench.settings.editor": "json", // opens in json by default
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.preferredHighContrastLightColorTheme": "Monokai Pro Light",
+    "workbench.preferredLightColorTheme": "Monokai Pro Light",
+    "workbench.preferredHighContrastColorTheme": "Monokai Pro (Filter Spectrum)",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.tree.indent": 15,
     "workbench.editor.highlightModifiedTabs": true,
@@ -59,9 +67,11 @@
     "workbench.activityBar.location": "top",
     "workbench.editor.pinnedTabsOnSeparateRow": false,
     "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
     // explorer settings
     "explorer.confirmDelete": false,
     "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
 
     // terminal settings
     "terminal.integrated.fontSize": 16,
@@ -151,6 +161,7 @@
     // "java.server.launchMode": "Standard",
     "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home",
     "java.format.settings.url": "/Users/paulnaber/Documents/im2m-codings-master/standard_im2m.xml",
+    "java.inlayHints.parameterNames.enabled": "none",
 
     // git settings
     "git.confirmSync": false,
@@ -163,6 +174,11 @@
     "git.path": "/usr/local/Cellar/git/2.31.0/bin/git",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
+    "gitlab.duoCodeSuggestions.enabled": false,
+    "gitlab.duoChat.enabled": false,
+    "gitlab.duo.enabledWithoutGitlabProject": false,
+    "gitlab.keybindingHints.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
 
     // gitlens settings
     "gitlens.hovers.currentLine.over": "line",
@@ -234,6 +250,11 @@
         "scminput": false,
         "yaml": true,
         "scss": false
+    },
+    "supermaven.enable": {
+        "*": true,
+        "html": false,
+        "go": true
     },
 
     // custom js and css
@@ -394,23 +415,25 @@
             "commands": ["workbench.view.search"]
         },
         // fzf search - more like nvim - extension required and some linux tools like fzf
-        {
-            "before": ["leader", "space"],
-            "commands": ["find-it-faster.findFiles"]
-        },
-        {
-            "before": ["leader", "/"],
-            "commands": ["find-it-faster.findWithinFiles"]
-        },
+        // quick search - same but without extension and directly by vscode
+        // {
+        //     "before": ["leader", "space"],
+        //     "commands": ["find-it-faster.findFiles"]
+        //     // "commands": ["workbench.action.quickTextSearch"]
+        // },
+        // {
+        //     "before": ["leader", "/"],
+        //     "commands": ["find-it-faster.findWithinFiles"]
+        // },
         // vscode searches
-        // {
-        //     "before": ["<Leader>", "space"],
-        //     "commands": ["workbench.action.quickOpen"]
-        // },
-        // {
-        //     "before": ["<Leader>", "/"],
-        //     "commands": ["workbench.action.quickTextSearch"]
-        // },
+        {
+            "before": ["<Leader>", "space"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<Leader>", "/"],
+            "commands": ["workbench.action.quickTextSearch"]
+        },
         // LAZYGIT
         {
             "before": ["<Leader>", "g", "g"],
@@ -443,29 +466,6 @@
             "commands": ["editor.action.formatDocument"]
         }
     ],
-    "workbench.startupEditor": "none",
-    "git.openRepositoryInParentFolders": "never",
-    "explorer.confirmDragAndDrop": false,
-    "jupyter.logging.level": "error",
-    "continue.showInlineTip": false,
-    "supermaven.enable": {
-        "*": true,
-        "html": false,
-        "go": false
-    },
-    "java.inlayHints.parameterNames.enabled": "none",
     "find-it-faster.general.useTerminalInEditor": true,
-    "window.commandCenter": false,
-    "gitlab.duoCodeSuggestions.enabled": false,
-    "gitlab.duoChat.enabled": false,
-    "gitlab.duo.enabledWithoutGitlabProject": false,
-    "gitlab.keybindingHints.enabled": false,
-    "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
-    "workbench.preferredHighContrastLightColorTheme": "Monokai Pro Light",
-    "workbench.preferredLightColorTheme": "Monokai Pro Light",
-    "window.systemColorTheme": "auto",
-    "window.autoDetectColorScheme": true,
-    "workbench.preferredHighContrastColorTheme": "Monokai Pro (Filter Spectrum)",
-    "codesnap.containerPadding": "0",
-    "editor.cursorStyle": "line-thin"
+    "codesnap.containerPadding": "0"
 }
