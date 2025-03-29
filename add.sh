@@ -29,6 +29,5 @@ prompt_and_copy "$HOME/Desktop/Profiles.json" "$HOME/Documents/Projects/personal
 prompt_and_copy "$HOME/Desktop/Keybindings.itermkeymap" "$HOME/Documents/Projects/personal/configs/terminal/iTerm2/"
 prompt_and_copy "$HOME/.tmux.conf" "$HOME/Documents/Projects/personal/configs/terminal"
 prompt_and_copy "$HOME/.p10k.zsh" "$HOME/Documents/Projects/personal/configs/terminal"
-prompt_and_copy "$HOME/.config/nvim" "$HOME/Documents/Projects/personal/configs"
 prompt_and_copy "$HOME/.gitconfig" "$HOME/Documents/Projects/personal/configs/git/"
 prompt_and_copy "$HOME/Library/Application Support/lazygit/config.yml" "$HOME/Documents/Projects/personal/configs/git/lazygit/"
