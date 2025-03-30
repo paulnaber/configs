@@ -309,7 +309,7 @@
     // leader leader + w               -> easymotion jump to word - currently disabled for quickopen
     // leader gg                       -> lazygit (lazygit extension required)
     // leader leader + s               -> format file
-    // leader rr                       -> rename symbol
+    // leader rn                       -> rename symbol
     // check this -> https://www.lazyvim.org/keymaps <- for more vim mappings
     "vim.normalModeKeyBindings": [
         {
@@ -409,11 +409,15 @@
             "before": ["<Leader>", "e"],
             "commands": ["workbench.view.explorer"]
         },
-        // FIND and SEARCH
         {
-            "before": ["<Leader>", "f"],
-            "commands": ["workbench.view.search"]
+            "before": ["<Leader>", "g", "e"],
+            "commands": ["workbench.scm.focus"]
         },
+        // FIND and SEARCH
+        // {
+        //     "before": ["<Leader>", "f"],
+        //     "commands": ["workbench.view.search"]
+        // },
         // fzf search - more like nvim - extension required and some linux tools like fzf
         // quick search - same but without extension and directly by vscode
         // {
@@ -441,8 +445,18 @@
         },
         // Refactoring
         {
-            "before": ["<Leader>", "r", "r"],
+            "before": ["<Leader>", "r", "n"],
             "commands": ["editor.action.rename"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["K"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        },
+        {
+            "before": ["J"],
+            "commands": ["editor.action.moveLinesDownAction"]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -462,10 +476,13 @@
             "commands": ["redo"]
         },
         {
-            "before": ["leader", "leader", "s"],
+            "before": ["leader", "f"],
             "commands": ["editor.action.formatDocument"]
         }
     ],
     "find-it-faster.general.useTerminalInEditor": true,
-    "codesnap.containerPadding": "0"
+    "codesnap.containerPadding": "0",
+    "[lua]": {
+        "editor.defaultFormatter": "Koihik.vscode-lua-format"
+    }
 }
