@@ -1,6 +1,10 @@
 git:
   paging:
-    colorArg: never
-    pager: ydiff -p cat -s --wrap --width={{columnWidth}}
+    # colorArg: never
+    # pager: ydiff -p cat -s --wrap --width={{columnWidth}}
+    colorArg: always
+    pager: diff-so-fancy  | sed -r 's/^([+-])//'
+    # colorArg: always
+    # pager: delta --dark --paging=never
 os:
   editorpreset: 'nvim'
