@@ -2,3 +2,5 @@ git:
   paging:
     colorArg: never
     pager: ydiff -p cat -s --wrap --width={{columnWidth}}
+os:
+  editorpreset: 'nvim'

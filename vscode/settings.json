@@ -283,7 +283,8 @@
     ],
     // To improve performance
     "extensions.experimental.affinity": {
-        "vscodevim.vim": 1
+        "vscodevim.vim": 1,
+        "asvetliakov.vscode-neovim": 1
     },
     // IMPORTANT KEYMAPS
     // ### tabs and windows
@@ -394,7 +395,7 @@
         },
         // see all open tabs and navigate between them
         {
-            "before": ["<Leader>", "tab"],
+            "before": ["<Leader>", "h"],
             "commands": [
                 "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
             ]
