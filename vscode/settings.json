@@ -297,21 +297,19 @@
     // leader (space) + td             -> close currtent tab
     // leader (space) + w              -> save file
     // ### quickjumps
-    // leader (space) tab              -> see open tabs - use it with enter to quickly go back to last file (ctrl tab basically)
+    // leader (space) h                -> see open tabs - use it with enter to quickly go back to last file (ctrl tab basically)
     // ctrl (caps) + o | i             -> jump back and forth
     // ### Search
     // leader (space) space            -> quick open file search
     // leader (space) + p              -> quick open file search
     // leader (space) /                -> grep search (file content)
-    // leader (space) f                -> search side panel
     // ### easymotion
-    // s                               -> easymotion character find - similar to leap
-    // leader leader + /               -> easymotion character find - similar to leap - currently disabled for quickopen
-    // leader leader + w               -> easymotion jump to word - currently disabled for quickopen
+    // s                               -> easymotion character find - similar to leap or flash
+    // leader + /                      -> easymotion character find - similar to leap - currently disabled for quickopen
+    // leader + w                      -> easymotion jump to word - currently disabled for quickopen
     // leader gg                       -> lazygit (lazygit extension required)
-    // leader leader + s               -> format file
+    // leader + f                      -> format file
     // leader rn                       -> rename symbol
-    // check this -> https://www.lazyvim.org/keymaps <- for more vim mappings
     "vim.normalModeKeyBindings": [
         {
             "before": ["J"],
