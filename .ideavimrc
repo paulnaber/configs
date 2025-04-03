@@ -45,9 +45,8 @@ nmap <leader>to :tabonly<CR>
 nmap <leader>w :w<CR>
 
 " Search
-nmap <leader><leader> :action SearchEverywhere<CR>
+nmap <leader><leader> GotoFile<CR>
 nmap <leader>/ :action FindInPath<CR>
-nmap <leader>f :action GotoFile<CR>
 nmap <leader>p :action GotoAction<CR>
 
 " Explorer
@@ -62,7 +61,7 @@ nmap s <Plug>(easymotion-bd-w)
 " LazyGit integration (requires the LazyGit plugin)
 nmap <leader>gg :action LazyGit.Open<CR>
 
-nnoremap <leader>gr :action RenameElement<CR>
+nnoremap <leader>rn :action RenameElement<CR>
 
 " Format document
 nmap <leader><leader>s :action ReformatCode<CR>
@@ -76,6 +75,9 @@ nmap K 5kzz
 " Hover
 nmap gh :action ShowHoverInfo<CR>
 
+" move line in visual mode
+vnoremap K :action MoveLineUp<CR>
+vnoremap J :action MoveLineDown<CR>
 
 " Undo/Redo
 nmap u :undo<CR>
