@@ -133,5 +133,16 @@
     {
         "key": "shift+cmd+f",
         "command": "workbench.action.quickTextSearch"
+    },
+    // Back and forward (same as vim)
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.navigateForward",
+        "when": "editorTextFocus"
     }
 ]

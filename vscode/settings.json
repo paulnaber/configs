@@ -159,7 +159,8 @@
     "application.shellEnvironmentResolutionTimeout": 20,
     "quarkus.tools.alwaysShowWelcomePage": false,
     // "java.server.launchMode": "Standard",
-    "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home",
+    // "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-21.0.6.jdk/Contents/Home",
     "java.format.settings.url": "/Users/paulnaber/Documents/im2m-codings-master/standard_im2m.xml",
     "java.inlayHints.parameterNames.enabled": "none",
 
@@ -393,7 +394,7 @@
         },
         // see all open tabs and navigate between them
         {
-            "before": ["<Leader>", "h"],
+            "before": ["<Leader>", "tab"],
             "commands": [
                 "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
             ]
