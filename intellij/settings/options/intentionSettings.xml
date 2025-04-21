@@ -1,0 +1,8 @@
+<application>
+  <component name="IntentionManagerSettings">
+    <ignoreAction name="Java/Control flow/Expand boolean" />
+    <ignoreAction name="Java/Control flow/Expand boolean to multiple ifs" />
+    <ignoreAction name="Java/Imports/Expand static import" />
+    <ignoreAction name="Java/Other/Expand call chain into call sequence" />
+  </component>
+</application>

@@ -1,0 +1,127 @@
+<application>
+  <component name="CodeFoldingSettings">
+    <option name="COLLAPSE_IMPORTS" value="false" />
+    <option name="COLLAPSE_FILE_HEADER" value="false" />
+  </component>
+  <component name="CodeInsightSettings">
+    <option name="AUTO_POPUP_JAVADOC_INFO" value="true" />
+  </component>
+  <component name="CodeVisionSettings">
+    <option name="codeVisionGroupToPosition">
+      <map>
+        <entry key="change.signature" value="Default" />
+        <entry key="component.usage" value="Default" />
+        <entry key="dev.nx.console.config-file-code-vision" value="Default" />
+        <entry key="gittoolbox.code.vision.blame.changeDate" value="Default" />
+        <entry key="gittoolbox.code.vision.blame.issueNav" value="Default" />
+        <entry key="inheritors" value="Default" />
+        <entry key="problems" value="Default" />
+        <entry key="references" value="Default" />
+        <entry key="rename" value="Default" />
+        <entry key="vcs.code.vision" value="Default" />
+      </map>
+    </option>
+    <option name="defaultPosition" value="Right" />
+    <option name="disabledCodeVisionProviderIds">
+      <set>
+        <option value="change.signature" />
+        <option value="component.usage" />
+        <option value="dev.nx.console.config-file-code-vision" />
+        <option value="gittoolbox.code.vision.blame.changeDate" />
+        <option value="gittoolbox.code.vision.blame.issueNav" />
+        <option value="inheritors" />
+        <option value="problems" />
+        <option value="references" />
+        <option value="rename" />
+        <option value="vcs.code.vision" />
+      </set>
+    </option>
+    <option name="enabled" value="false" />
+  </component>
+  <component name="DeclarativeInlayHintsSettings">
+    <option name="enabledOptions">
+      <map>
+        <entry key="js.type.hints#function.returns" value="false" />
+        <entry key="js.type.hints#non.paren.single.param" value="false" />
+        <entry key="js.type.hints#parameters.in.parens" value="false" />
+        <entry key="js.type.hints#variables.and.fields" value="false" />
+        <entry key="kotlin.lambdas.hints#hints.lambda.receivers.parameters" value="false" />
+        <entry key="kotlin.lambdas.hints#hints.lambda.return" value="false" />
+        <entry key="kotlin.references.types.hints#hints.type.function.parameter" value="false" />
+        <entry key="kotlin.references.types.hints#hints.type.function.return" value="false" />
+        <entry key="kotlin.references.types.hints#hints.type.property" value="false" />
+        <entry key="kotlin.references.types.hints#hints.type.variable" value="false" />
+        <entry key="ts.type.hints#function.returns" value="false" />
+        <entry key="ts.type.hints#non.paren.single.param" value="false" />
+        <entry key="ts.type.hints#parameters.in.parens" value="false" />
+        <entry key="ts.type.hints#variables.and.fields" value="false" />
+      </map>
+    </option>
+    <option name="providerIdToEnabled">
+      <map>
+        <entry key="groovy.implicit.null.argument" value="false" />
+        <entry key="groovy.lambda.parameter.inlay.provider" value="false" />
+        <entry key="groovy.local.variable.implicit.types" value="false" />
+        <entry key="java.implicit.lambdaParameter" value="false" />
+        <entry key="java.implicit.types" value="false" />
+        <entry key="java.method.chains" value="false" />
+        <entry key="js.chain.hints" value="false" />
+        <entry key="js.type.hints" value="false" />
+        <entry key="kotlin.lambdas.hints" value="false" />
+        <entry key="kotlin.method.chains" value="false" />
+        <entry key="kotlin.references.types.hints" value="false" />
+        <entry key="kotlin.values.hints" value="false" />
+        <entry key="qodana.yaml.inspection.descriptions" value="false" />
+        <entry key="ts.chain.hints" value="false" />
+        <entry key="ts.enum.hints" value="false" />
+        <entry key="ts.type.hints" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="EditorSettings">
+    <option name="languageBreadcrumbsMap">
+      <map>
+        <entry key="Groovy" value="true" />
+        <entry key="HTML" value="true" />
+        <entry key="JAVA" value="true" />
+        <entry key="JSON" value="true" />
+        <entry key="Markdown" value="true" />
+        <entry key="XHTML" value="true" />
+        <entry key="XML" value="true" />
+        <entry key="kotlin" value="true" />
+        <entry key="yaml" value="true" />
+      </map>
+    </option>
+    <option name="SHOW_BREADCRUMBS_ABOVE" value="true" />
+    <option name="SHOW_BREADCRUMBS" value="false" />
+    <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
+  </component>
+  <component name="InlayHintsSettings">
+    <option name="disabledHintProviderIds">
+      <set>
+        <option value="Dockerfile.docker.inlay.hints" />
+        <option value="JAVA.annotation.hints" />
+        <option value="JSON.Audit" />
+        <option value="JSON.ConformanceScan" />
+        <option value="JSON.Tags" />
+        <option value="JSON.Try it" />
+        <option value="Markdown.MarkdownTableInlayProviderSettingsKey" />
+        <option value="yaml.Audit" />
+        <option value="yaml.ConformanceScan" />
+        <option value="yaml.Tags" />
+        <option value="yaml.Try it" />
+      </set>
+    </option>
+    <option name="lastViewedProviderKeyId" value="" />
+    <settingsMapElement>
+      <JAVA.annotation.hints>
+        <Settings>
+          <option name="showExternal" value="false" />
+        </Settings>
+      </JAVA.annotation.hints>
+    </settingsMapElement>
+  </component>
+  <component name="JavaCodeFoldingSettings">
+    <option name="collapseOneLineMethods" value="false" />
+  </component>
+</application>

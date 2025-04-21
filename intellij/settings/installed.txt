@@ -1,0 +1,15 @@
+com.github.mokkapps.codesnapintellijextension
+org.yelog.ideavim.flash
+Lombook Plugin
+EclipseCodeFormatter
+AceJump
+com.intellij.plugins.vscodekeymap
+gherkin
+Docker
+com.jetbrains.edu
+monokai-pro
+IdeaVIM
+org.jetbrains.IdeaVim-EasyMotion
+org.jetbrains.plugins.github
+org.jetbrains.plugins.gitlab
+zielu.gittoolbox

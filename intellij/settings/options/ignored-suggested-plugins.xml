@@ -1,0 +1,11 @@
+<application>
+  <component name="IgnoredPluginSuggestions">
+    <option name="pluginIds">
+      <list>
+        <option value="Lombook Plugin" />
+        <option value="dev.nx.console" />
+        <option value="com.intellij.aqua" />
+      </list>
+    </option>
+  </component>
+</application>

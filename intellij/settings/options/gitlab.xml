@@ -1,0 +1,14 @@
+<application>
+  <component name="GitLabAccounts"><![CDATA[{
+  "accounts": [
+    {
+      "id": "bf5aa517-69db-4b8a-90cb-d88e45a38bce",
+      "name": "paul.naber",
+      "server": {
+        "uri": "https://git.m2mgate.de"
+      }
+    }
+  ]
+}]]></component>
+  <component name="GitLabSettings">{}</component>
+</application>

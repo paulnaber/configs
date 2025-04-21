@@ -1,0 +1,20 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$" value="true" />
+        <entry key="$USER_HOME$/Documents/Projects/Java Problems" value="true" />
+        <entry key="$USER_HOME$/Documents/Projects/configs" value="true" />
+        <entry key="$USER_HOME$/Documents/Projects/melitta-cloud" value="true" />
+        <entry key="$USER_HOME$/Documents/Projects/melitta-common" value="true" />
+        <entry key="$USER_HOME$/Documents/Projects/melitta-gateway" value="true" />
+        <entry key="$USER_HOME$/Documents/Projects/melitta-portal" value="true" />
+        <entry key="$USER_HOME$/Documents/Projects/test" value="true" />
+        <entry key="$USER_HOME$/Documents/projects/personal/ai-chat-service-quarkus" value="true" />
+        <entry key="$USER_HOME$/Documents/projects/work/m2mgate-ai-service" value="true" />
+        <entry key="$USER_HOME$/Documents/projects/work/melitta-cloud" value="true" />
+        <entry key="$USER_HOME$/Documents/projects/work/melitta-gateway" value="true" />
+      </map>
+    </option>
+  </component>
+</application>

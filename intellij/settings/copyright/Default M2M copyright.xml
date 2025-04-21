@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="allowReplaceRegexp" value="Copyright by INSIDE M2M GmbH" />
+    <option name="notice" value="Copyright by INSIDE M2M GmbH and the authors 2004 - &amp;#36;{today.year}&#10;*************************************************************&#10;********************* CONFIDENTIAL **************************&#10;*************************************************************&#10;@author Paul Naber (paul.naber@inside-m2m.de) " />
+    <option name="myName" value="Default M2M copyright" />
+  </copyright>
+</component>

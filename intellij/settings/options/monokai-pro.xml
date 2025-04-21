@@ -1,0 +1,9 @@
+<application>
+  <component name="MonokaiProConfig">
+    <option name="hasMonokaiProIcons" value="false" />
+    <option name="hasVisibleFolderIcons" value="true" />
+    <option name="lastVersionUpdateShown" value="2.0.1" />
+    <option name="tsFirst" value="1744298722" />
+    <option name="tsLast" value="1745233931" />
+  </component>
+</application>

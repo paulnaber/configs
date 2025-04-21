@@ -1,0 +1,12 @@
+<scheme name="_@user_Monokai Pro (Classic)" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="ide">WebStorm</property>
+    <property name="ideVersion">2024.2.4.0.0</property>
+    <property name="originalScheme">Monokai Pro (Classic)</property>
+    <property name="partialSave">true</property>
+    <property name="pluginId">monokai-pro</property>
+  </metaInfo>
+  <colors>
+    <option name="FILESTATUS_COPIED" value="a9dc76" />
+  </colors>
+</scheme>

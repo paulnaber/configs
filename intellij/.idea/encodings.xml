@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/melitta-bb-offline-update/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-bb-offline-update/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-bb-updater/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-bb-updater/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-ble-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-ble-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-libs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-libs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-support/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-opcua-support/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-rest-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-rest-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-rest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-rest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway-utils/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-opcua-demo-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/melitta-opcua-demo-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metal-device-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metal-device-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metal-device-rest-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metal-device-rest-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metal-device-rest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metal-device-rest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
