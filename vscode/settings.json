@@ -26,9 +26,9 @@
     // Monaspace
     // https://monaspace.githubnext.com/
     "editor.fontFamily": "Monaspace Neon Var",
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.fontWeight": 300,
-    "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
+    // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
     "editor.renderControlCharacters": false,
     "editor.bracketPairColorization.enabled": true,
@@ -53,9 +53,9 @@
     // "workbench.colorTheme": "Catppuccin Mocha", // good light theme
     // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
     "workbench.settings.editor": "json", // opens in json by default
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.colorTheme": "Monokai Pro Light",
     "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
-    "workbench.preferredHighContrastLightColorTheme": "Monokai Pro Light",
+    "workbench.preferredHighContrastLightColorTheme": "Default Light+",
     "workbench.preferredLightColorTheme": "Monokai Pro Light",
     "workbench.preferredHighContrastColorTheme": "Monokai Pro (Filter Spectrum)",
     "workbench.iconTheme": "material-icon-theme",
@@ -64,10 +64,15 @@
     "workbench.editorAssociations": {
         "*.mp4": "default"
     },
-    "workbench.activityBar.location": "top",
     "workbench.editor.pinnedTabsOnSeparateRow": false,
     "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "none",
+    "workbench.colorCustomizations": {
+        "diffEditor.insertedLineBackground": "#a6ff0017",
+        "diffEditor.removedLineBackground": "#ff000018",
+        "diffEditor.insertedTextBackground": "#a6ff006c",
+        "diffEditor.removedTextBackground": "#ff000065"
+    },
     // explorer settings
     "explorer.confirmDelete": false,
     "explorer.compactFolders": false,
@@ -158,11 +163,37 @@
     "javascript.inlayHints.parameterTypes.enabled": true,
     "application.shellEnvironmentResolutionTimeout": 20,
     "quarkus.tools.alwaysShowWelcomePage": false,
-    // "java.server.launchMode": "Standard",
-    // "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home",
-    "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-21.0.6.jdk/Contents/Home",
-    "java.format.settings.url": "/Users/paulnaber/Documents/im2m-codings-master/standard_im2m.xml",
+    "java.format.settings.url": "/Users/paulnaber/Documents/Java/standard_im2m.xml",
     "java.inlayHints.parameterNames.enabled": "none",
+
+    // java settings
+    "java.home": "/Users/paulnaber/Documents/Java/zulu-11.jdk/Contents/Home",
+    "xml.java.home": "/Users/paulnaber/Documents/Java/zulu-11.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/zulu-11.jdk/Contents/Home",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "/Users/paulnaber/Documents/Java/zulu-8.jdk/Contents/Home"
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "/Users/paulnaber/Documents/Java/zulu-11.jdk/Contents/Home"
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "/Users/paulnaber/Documents/Java/jdk-17.0.12.jdk/Contents/Home"
+        },
+        {
+            "name": "JavaSE-21",
+            "path": "/Users/paulnaber/Documents/Java/jdk-21.0.6.jdk/Contents/Home",
+            "default": true
+        }
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.server.launchMode": "Standard",
+    "java.import.maven.enabled": true,
+    "java.configuration.maven.userSettings": "/Users/paulnaber/.m2/settings.xml",
+    "maven.terminal.useJavaHome": true,
 
     // git settings
     "git.confirmSync": false,
@@ -253,14 +284,14 @@
         "scss": false
     },
     "supermaven.enable": {
-        "*": true,
+        "*": false,
         "html": false,
         "go": true
     },
 
     // custom js and css
     "vscode_custom_css.imports": ["file:///Users/paulnaber/.vscode/style.css"],
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
 
     // VIM
     "vim.hlsearch": true,
@@ -484,5 +515,41 @@
     "codesnap.containerPadding": "0",
     "[lua]": {
         "editor.defaultFormatter": "Koihik.vscode-lua-format"
-    }
+    },
+    "diffEditor.renderSideBySide": false,
+    "java.completion.favoriteStaticMembers": [
+        "de.m2mgate.melitta.rest.server.*",
+        "org.junit.Assert.*",
+        "org.junit.Assume.*",
+        "org.junit.jupiter.api.Assertions.*",
+        "org.junit.jupiter.api.Assumptions.*",
+        "org.junit.jupiter.api.DynamicContainer.*",
+        "org.junit.jupiter.api.DynamicTest.*",
+        "org.mockito.Mockito.*",
+        "org.mockito.ArgumentMatchers.*",
+        "org.mockito.Answers.*"
+    ],
+    "workbench.activityBar.location": "top",
+    "tailwind-fold.autoFold": false,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "codesnap.backgroundColor": "#fff",
+    "codesnap.showLineNumbers": false,
+    "codesnap.showWindowControls": false,
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "fileHistory": true,
+        "repositories": true,
+        "searchAndCompare": false,
+        "launchpad": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "docker.extension.enableComposeLanguageServer": false
 }
