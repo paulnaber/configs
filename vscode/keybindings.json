@@ -131,11 +131,6 @@
         "when": "terminal.active"
     },
     {
-        "key": "shift+cmd+f",
-        "command": "workbench.action.quickTextSearch"
-    },
-    // Back and forward (same as vim)
-    {
         "key": "ctrl+o",
         "command": "workbench.action.navigateBack",
         "when": "editorTextFocus"
@@ -144,5 +139,28 @@
         "key": "ctrl+i",
         "command": "workbench.action.navigateForward",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift shift",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "cmd+e",
+        "command": "extension.intellijRecentFiles",
+        "when": "!inQuickOpen"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
     }
 ]

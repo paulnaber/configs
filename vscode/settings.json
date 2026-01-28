@@ -2,7 +2,6 @@
     // editor settings
     // "editor.fontSize": 14,
     "editor.cursorSurroundingLines": 12,
-    "window.commandCenter": false,
     "window.systemColorTheme": "auto",
     "window.autoDetectColorScheme": true,
 
@@ -26,7 +25,7 @@
     // Monaspace
     // https://monaspace.githubnext.com/
     "editor.fontFamily": "Monaspace Neon Var",
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.fontWeight": 300,
     // "editor.fontLigatures": "'calt', 'liga', 'ss03', 'ss04', 'ss06'",
 
@@ -40,7 +39,7 @@
     "editor.inlineSuggest.enabled": true,
     "editor.accessibilitySupport": "off",
     "editor.minimap.renderCharacters": false,
-    "editor.minimap.autohide": true,
+    "editor.minimap.autohide": "mouseover",
     "editor.minimap.enabled": false,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.smoothScrolling": true,
@@ -54,7 +53,7 @@
     // "workbench.colorTheme": "Catppuccin Latte", // good dark theme
     "workbench.settings.editor": "json", // opens in json by default
     "workbench.colorTheme": "Monokai Pro Light",
-    "workbench.preferredDarkColorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.preferredDarkColorTheme": "Monokai Pro Light",
     "workbench.preferredHighContrastLightColorTheme": "Default Light+",
     "workbench.preferredLightColorTheme": "Monokai Pro Light",
     "workbench.preferredHighContrastColorTheme": "Monokai Pro (Filter Spectrum)",
@@ -62,7 +61,8 @@
     "workbench.tree.indent": 15,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editorAssociations": {
-        "*.mp4": "default"
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.mp4": "vscode.videoPreview"
     },
     "workbench.editor.pinnedTabsOnSeparateRow": false,
     "workbench.list.smoothScrolling": true,
@@ -79,7 +79,7 @@
     "explorer.confirmDragAndDrop": false,
 
     // terminal settings
-    "terminal.integrated.fontSize": 16,
+    // "terminal.integrated.fontSize": 12,
     "terminal.external.osxExec": "iTerm",
     "terminal.integrated.env.osx": {},
     "terminal.integrated.smoothScrolling": true,
@@ -112,7 +112,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -167,9 +167,9 @@
     "java.inlayHints.parameterNames.enabled": "none",
 
     // java settings
-    "java.home": "/Users/paulnaber/Documents/Java/zulu-11.jdk/Contents/Home",
+    "java.home": "/Users/paulnaber/Documents/Java/jjdk-21.0.6.jdk/Contents/Home",
     "xml.java.home": "/Users/paulnaber/Documents/Java/zulu-11.jdk/Contents/Home",
-    "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/zulu-11.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Users/paulnaber/Documents/Java/jdk-21.0.6.jdk/Contents/Home",
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
@@ -190,11 +190,21 @@
         }
     ],
     "java.configuration.updateBuildConfiguration": "automatic",
-    "java.server.launchMode": "Standard",
     "java.import.maven.enabled": true,
     "java.configuration.maven.userSettings": "/Users/paulnaber/.m2/settings.xml",
     "maven.terminal.useJavaHome": true,
-
+    "java.jdt.ls.apt.enabled": false,
+    // stop vscode from locking the files -> mvn clean fails otherwise
+    // also possible to disable the autobuild
+    // "files.watcherExclude": {
+    //     "**/target/**": true
+    // },
+    // "java.test.config": {
+    //     "vmArgs": ["-Dquarkus.test.type=integration"]
+    // },
+    "java.test.config": {
+        "vmArgs": ["-Dquarkus.test.type=quarkus-test"]
+    },
     // git settings
     "git.confirmSync": false,
     "files.exclude": {
@@ -516,7 +526,7 @@
     "[lua]": {
         "editor.defaultFormatter": "Koihik.vscode-lua-format"
     },
-    "diffEditor.renderSideBySide": false,
+    "diffEditor.renderSideBySide": true,
     "java.completion.favoriteStaticMembers": [
         "de.m2mgate.melitta.rest.server.*",
         "org.junit.Assert.*",
@@ -551,5 +561,96 @@
         "launchpad": false
     },
     "github.copilot.nextEditSuggestions.enabled": true,
-    "docker.extension.enableComposeLanguageServer": false
+    "docker.extension.enableComposeLanguageServer": false,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "editor.gotoLocation.multipleReferences": "gotoAndPeek",
+    "terminal.integrated.cursorStyleInactive": "line",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "chat.tools.terminal.autoApprove": {
+        "/^\\./mvnw quarkus:dev$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^mvn quarkus:dev$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^mvn clean$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^mvn quarkus:dev -q$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^pkill -f \"quarkus\\.\\*dev\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^mvn clean quarkus:dev$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "./setup-dev.sh": true,
+        "mv": true,
+        "npx": true,
+        "npm run test:all": true,
+        "true": true
+    },
+    "window.newWindowProfile": "Default",
+    "redhat.telemetry.enabled": true,
+
+    "cucumber.glue": [
+        "**/*.cy.ts",
+        "*specs*/**/*.cs",
+        "features/**/*.js",
+        "features/**/*.jsx",
+        "features/**/*.php",
+        "features/**/*.py",
+        "features/**/*.rs",
+        "features/**/*.rb",
+        "features/**/*.ts",
+        "features/**/*.tsx",
+        "features/**/*_test.go",
+        "src/test/**/*.java",
+        "tests/**/*.py",
+        "tests/**/*.rs"
+    ],
+    "cucumber.features": [
+        "**/*.feature",
+        "src/test/**/*.feature",
+        "features/**/*.feature",
+        "tests/**/*.feature",
+        "*specs*/**/*.feature"
+    ],
+    "typescript.experimental.useTsgo": false,
+    "java.diagnostic.filter": [
+        "**/target/generated-sources/**" // Example pattern to exclude generated source files
+    ],
+    "excalidraw.theme": "auto",
+    "sonarlint.automaticAnalysis": false,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.tools.urls.autoApprove": {
+        "https://nx.dev": {
+            "approveRequest": false,
+            "approveResponse": true
+        }
+    },
+    "chat.editing.confirmEditRequestRemoval": false,
+    "git.blame.editorDecoration.enabled": true,
+    "git.blame.ignoreWhitespace": true,
+    "intellijRecentFiles.navigate": true
 }
